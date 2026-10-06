@@ -1,0 +1,6 @@
+# Mencegah file .sql, .php di folder ini diakses langsung lewat URL browser
+# jika suatu saat di-deploy ke hosting (di Laragon lokal ini tidak wajib, tapi praktik baik)
+Options -Indexes
+<FilesMatch "\.(sql|md)$">
+    Require all denied
+</FilesMatch>
